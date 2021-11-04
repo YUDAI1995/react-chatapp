@@ -1,0 +1,31 @@
+$defaultTextColor: #333333;
+
+//$baseColor: #ff9a28;
+$baseColor: #2785ff;
+
+$btnColor: #2785ff;
+$btnBorderColor: #1554a5;
+$btnHoverColor: #63a6ff;
+
+$grayBorderColor: #dfdfdf;
+
+$tabBGColor: #f7f7f7;
+$tabMarginPX: 4px;
+$tabMarginPer: 4%;
+$tabSpeed: 0.2s;
+
+$transitionSpeed: 0.3s;
+
+$breakpoints: (
+  "sm": 570px,
+  "md": 761px,
+  "lg": 1080px,
+  "xl": 1200px,
+  "xxl": 1400px,
+);
+
+@mixin mq($size) {
+  @media screen and (max-width: #{map-get($breakpoints, $size)}) {
+    @content;
+  }
+}

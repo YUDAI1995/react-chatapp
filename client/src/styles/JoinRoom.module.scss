@@ -1,0 +1,83 @@
+@import "./variable";
+
+.joinRoom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh - 80px);
+
+  .joinRoomSection {
+    text-align: center;
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 20px;
+
+    .title {
+      font-size: 1.6rem;
+    }
+
+    .joinRoomForm {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      margin-top: 20px;
+      height: 300px;
+
+      .inputWrapper {
+        position: relative;
+        width: 100%;
+        text-align: left;
+        padding-top: 30px;
+
+        .label {
+          position: absolute;
+          display: inline-block;
+          color: #b3b3b3;
+          background-color: #ffffff;
+          left: 3px;
+          top: 8px;
+          font-size: 1.4rem;
+          padding: 4px 6px;
+          transition: $transitionSpeed;
+        }
+
+        .input {
+          width: 100%;
+          border: 0;;
+          border-bottom: 2px solid $btnBorderColor;
+          border-radius: 8px;
+          padding: 14px 10px 10px;
+
+          &:focus ~ .label {
+            color: $baseColor;
+            top: -6px;
+            background-color: #ffffff00;
+          }
+        }
+      }
+
+      .submitBtn {
+        font-size: 1.6rem;
+        color: #ffffff;
+        background-color: $btnColor;
+        width: 240px;
+        border: 0;
+        border-bottom: 4px solid $btnBorderColor;
+        border-radius: 40px;
+        padding: 16px 10px;
+        cursor: pointer;
+        transition: background-color $transitionSpeed;
+
+        &:hover,
+        &:active {
+          border: 0;
+          margin-top: 4px;
+          background-color: $btnHoverColor;
+        }
+      }
+    }
+  }
+}

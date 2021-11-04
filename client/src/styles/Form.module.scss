@@ -1,0 +1,28 @@
+@import "./variable";
+
+.form {
+  display: flex;
+  max-width: 540px;
+
+  .input {
+    width: 100%;
+    border: 1px solid $grayBorderColor;
+    border-radius: 2px;
+    padding: 6px 10px;
+  }
+  .submitBtn {
+    color: #ffffff;
+    min-width: 120px;
+    border: 0;
+    border-bottom: 2px solid $btnBorderColor;
+    border-radius: 4px;
+    padding: 4px;
+    background-color: $btnColor;
+    transition: $transitionSpeed;
+
+    &:hover,
+    &:active {
+      background-color: $btnHoverColor;
+    }
+  }
+}
