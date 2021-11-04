@@ -21,8 +21,9 @@ export const Form: React.FC<FormProp> = ({ socket }) => {
   const newTextSubmitHandler = async (event: React.FormEvent) => {
     event.preventDefault();
 
-    const port = 3001;
-    const socket = io(`http://localhost:${port}`);
+    //const port = 3001;
+    // const socket = io(`http://localhost:${port}`);
+    const socket = io(`/`);
     socket.on("connect", () => console.log("connect"));
     const room = user.room ? user.room : "Gest Room";
 
