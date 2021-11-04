@@ -1,0 +1,23 @@
+{
+  "name": "react-chatapp",
+  "version": "1.0.0",
+  "description": "This is a chat app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/index.js",
+    "predeploy": "cd client && npm install && npm run build",
+    "deploy": "gh-pages -d client/build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YUDAI1995/react-chatapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://yudai1995.github.io/react-chatapp/",
+  "dependencies": {
+    "gh-pages": "^3.2.3",
+    "nodemon": "^2.0.14"
+  }
+}
