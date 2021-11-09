@@ -1,6 +1,7 @@
 import * as express from "express";
 import * as http from "http";
 import * as socketio from "socket.io";
+import { Server } from "socket.io";
 import * as path from "path";
 import * as cors from "cors";
 
@@ -9,7 +10,7 @@ app.use(cors());
 
 const server: http.Server = http.createServer(app);
 
-const io: socketio.Server = require("socket.io")(server, {
+const io: socketio.Server = new Server(server, {
   cors: {
     // for DEV
     //origin: "http://localhost:3000",
