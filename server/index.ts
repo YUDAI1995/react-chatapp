@@ -14,7 +14,7 @@ const io: socketio.Server = new Server(server, {
   cors: {
     // for DEV
     //origin: "http://localhost:3000",
-    origin: "https://y1995-chatapp.herokuapp.com",
+    origin: "https://y1995-chatapp.herokuapp.com/",
     methods: ["GET", "POST"],
   },
 });
