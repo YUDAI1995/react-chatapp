@@ -7,12 +7,17 @@ import { Form } from "./components/Form";
 import { JoinRoom } from "./components/JoinRoom";
 import { RootState } from "./store";
 
+//  ※ for DEV
+//const socket = io("http://localhost:3000");
+
 const socket = io("/");
 socket.on("connect", () => {
-  console.log(socket.id); // x8WIv7-mJelg7on_ALbx
+  //success時
+  //console.log(socket.id); // x8WIv7-mJelg7on_ALbx
 });
 
 socket.on("disconnect", () => {
+  // 切断時
   console.log(socket.id); // undefined
 });
 

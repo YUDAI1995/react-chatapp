@@ -18,6 +18,8 @@ export const getRandomID = (myStrong?: number) => {
  */
 export const getCurrentTime = () => {
   return (
-    new Date(Date.now()).getHours() + ":" + new Date(Date.now()).getMinutes()
+    new Date(Date.now()).getHours() +
+    ":" +
+    ("00" + new Date(Date.now()).getMinutes()).slice(-2) //分は一桁の場合0パディング
   );
 };

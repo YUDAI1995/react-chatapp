@@ -1,15 +1,19 @@
-const express = require("express");
-const app = express();
-const path = require('path');
-const http = require("http");
-const cors = require("cors");
-const { Server } = require("socket.io");
+import * as express from "express";
+import * as http from "http";
+import * as socketio from "socket.io";
+import * as path from "path";
+import * as cors from "cors";
+
+const app: express.Express = express();
 app.use(cors());
 
-const server = http.createServer(app);
-const io = new Server(server, {
+const server: http.Server = http.createServer(app);
+
+const io: socketio.Server = require("socket.io")(server, {
   cors: {
-    origin: "*",
+    // for DEV
+    //origin: "http://localhost:3000",
+    origin: "https://y1995-chatapp.herokuapp.com",
     methods: ["GET", "POST"],
   },
 });

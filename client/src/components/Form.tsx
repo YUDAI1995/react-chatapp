@@ -21,10 +21,14 @@ export const Form: React.FC<FormProp> = ({ socket }) => {
   const newTextSubmitHandler = async (event: React.FormEvent) => {
     event.preventDefault();
 
-    //const port = 3001;
+    // ※for DEV
+    // const port = 3001;
     // const socket = io(`http://localhost:${port}`);
+
     const socket = io(`/`);
-    socket.on("connect", () => console.log("connect"));
+    socket.on("connect", () => {
+      //接続時
+    });
     const room = user.room ? user.room : "Gest Room";
 
     if (textInputRef.current!.value !== "") {
@@ -42,8 +46,6 @@ export const Form: React.FC<FormProp> = ({ socket }) => {
 
   useEffect(() => {
     socket.on("receveMessage", (data: ChatList) => {
-      console.log(data);
-
       dispath({
         type: "ADD_CHAT",
         payload: {

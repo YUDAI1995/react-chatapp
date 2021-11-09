@@ -48,7 +48,7 @@ export const JoinRoom: React.FC<JoinRoomProp> = ({ socket }) => {
                 className={`${styles.input} ${styles.inputUser}`}
                 ref={inputUserRef}
                 type="text"
-                placeholder="Please enter user name"
+                placeholder="Please enter your username"
               />
               <label htmlFor="user" className={styles.label}>
                 UserName
@@ -60,7 +60,7 @@ export const JoinRoom: React.FC<JoinRoomProp> = ({ socket }) => {
                 className={`${styles.input} ${styles.inputRoom}`}
                 ref={inputroomRef}
                 type="text"
-                placeholder="Please enter room"
+                placeholder="Please enter a room"
               />
               <label htmlFor="room" className={styles.label}>
                 Room
