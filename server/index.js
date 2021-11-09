@@ -33,8 +33,8 @@ var server = http.createServer(app);
 var io = new socket_io_1.Server(server, {
     cors: {
         // for DEV
-        origin: "http://localhost:3000",
-        //origin: "https://y1995-chatapp.herokuapp.com/",
+        // origin: "http://localhost:3000",
+        origin: "https://y1995-chatapp.herokuapp.com/",
         methods: ["GET", "POST"]
     }
 });
