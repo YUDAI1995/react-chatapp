@@ -1,9 +1,9 @@
-import * as express from "express";
+import express from "express";
+import cors from "cors";
 import * as http from "http";
 import * as socketio from "socket.io";
 import { Server } from "socket.io";
 import * as path from "path";
-import * as cors from "cors";
 
 const app: express.Express = express();
 app.use(cors());
@@ -13,7 +13,7 @@ const server: http.Server = http.createServer(app);
 const io: socketio.Server = new Server(server, {
   cors: {
     // for DEV
-    //origin: "http://localhost:3000",
+    // origin: "http://localhost:3000",
     origin: "https://y1995-chatapp.herokuapp.com/",
     methods: ["GET", "POST"],
   },

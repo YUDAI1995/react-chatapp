@@ -8,7 +8,7 @@ import { JoinRoom } from "./components/JoinRoom";
 import { RootState } from "./store";
 
 //  ※ for DEV
-//const socket = io("http://localhost:3000");
+// const socket = io("http://localhost:3001/");
 
 const socket = io("/");
 socket.on("connect", () => {
